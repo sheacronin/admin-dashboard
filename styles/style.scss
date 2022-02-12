@@ -17,6 +17,10 @@ body {
     font-family: sans-serif;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -31,6 +35,7 @@ body {
         align-items: start;
         justify-items: start;
         grid-template-rows: 1fr 3fr 6fr;
+        z-index: 2;
         
         h1 {
             font-size: 30px;
@@ -58,6 +63,83 @@ body {
     header {
         background-color: $white;
         grid-column: 2 / -1;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.4);
+        z-index: 1;
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+        padding: 10px 0;
+
+        > div {
+            padding: 0 40px;
+        }
+
+        img {
+            border-radius: 50%;
+            background-color: $secondary-color;
+        }
+
+        .searchbar {
+            display: grid;
+            grid-template-columns: 1fr 8fr;
+            align-items: center;
+
+            input {
+                border: none;
+                background-color: $grey;
+                border-radius: 20px;
+                padding: 8px 20px;
+            }
+        }
+
+        .user-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 3fr;
+            justify-items: center;
+            align-items: center;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .post-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding-left: 0;
+
+            button {
+                background-color: $accent-color;
+                color: $white;
+                border: none;
+                padding: 10px;
+                border-radius: 30px;
+            }
+        }
+
+        .user-greeting {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+
+            img {
+                width: 70px;
+                height: 70px;
+                grid-row: 1 / span 2;
+            }
+
+            .hi {
+                align-self: center;
+            }
+
+            .user-name {
+                grid-column: 2 / -1;
+                font-weight: bold;
+                align-self: start;
+            }
+        }
     }
 
     main {
