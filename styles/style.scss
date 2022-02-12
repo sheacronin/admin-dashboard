@@ -145,6 +145,31 @@ button:hover {
     main {
         background-color: $grey;
         grid-column: 2 / -1;
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        gap: 20px;
+        padding: 30px;
+
+        .projects {
+            grid-row: 1 / span 2;
+
+            h2 {
+                grid-column: 1 / -1;
+            }
+
+            .projects-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                height: 100%;
+                padding: 20px 0;
+            }
+
+            article {
+                background-color: $white;
+                padding: 20px;
+            }
+        }
     }
 }
 
