@@ -7,12 +7,6 @@ $dark-grey: #8d8d8d;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 * {
     box-sizing: border-box;
 }
